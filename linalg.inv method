@@ -1,0 +1,45 @@
+#Example 1
+import numpy as np
+
+# Define a 2x2 matrix
+A = np.array([[2, 1], [1, 3]])
+
+# Calculate the inverse using linalg.inv
+A_inv = np.linalg.inv(A)
+
+# Print the original and inverse matrices
+print("Original matrix A:")
+print(A)
+print("\nInverse of A:")
+print(A_inv)
+
+#Example #2
+import numpy as np
+from numpy.linalg import LinAlgError  # Import for error handling
+
+# Define a singular matrix
+B = np.array([[1, 0], [0, 0]])
+
+try:
+  # Attempt to calculate the inverse
+  B_inv = np.linalg.inv(B)
+  print("Inverse of B:")
+  print(B_inv)
+except LinAlgError as e:
+  print("Matrix B is singular and does not have an inverse.")
+  print(e)
+
+#Example #3
+import numpy as np
+
+# Define a 3x3 matrix
+C = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+
+# Calculate the inverse
+C_inv = np.linalg.inv(C)
+
+# Print the original and inverse matrices
+print("Original matrix C:")
+print(C)
+print("\nInverse of C:")
+print(C_inv)
